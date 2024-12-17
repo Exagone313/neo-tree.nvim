@@ -546,15 +546,7 @@ M.reveal_current_file = function(source_name, callback, force_cwd)
       state.path, _ = utils.split_path(path)
     end
   elseif not utils.is_subpath(cwd, path) then
-    cwd, _ = utils.split_path(path)
-    inputs.confirm("File not in cwd. Change cwd to " .. cwd .. "?", function(response)
-      if response == true then
-        state.path = cwd
-        M.focus(source_name, path, callback)
-      else
-        M.focus(source_name, nil, callback)
-      end
-    end)
+    M.focus(source_name, nil, callback)
     return
   end
   if path then

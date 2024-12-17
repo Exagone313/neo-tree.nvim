@@ -575,11 +575,10 @@ nnoremap gd :Neotree float reveal_file=<cfile> reveal_force_cwd<cr>
 ```
 
 #### `reveal_force_cwd`
-This is a boolean flag. Normally, if you use one of the reveal options and the
-given file is not within the current working directory, you will be asked if you
-want to change the current working directory. If you include this flag, it will
-automatically change the directory without prompting. This option implies
-"reveal", so you do not need to specify both.
+This is a boolean flag. If you use one of the reveal options and the given file
+is not within the current working directory and you include this flag, it will
+automatically change the directory. This option implies "reveal", so you do not
+need to specify both.
 
 #### `selector`
 This is a boolean flag. When you specifically set this to false (`selector=false`)
